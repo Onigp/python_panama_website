@@ -4,7 +4,7 @@ export function VolunteerComponent() {
             <section className="volunteer-hero">
                 <div className="container">
                     <div className="volunteer-hero-content">
-                        <span className="volunteer-kicker">Quiero ayudar</span>
+                        <span className="sponsors-kicker">Quiero ayudar</span>
                         <h1>Construye la comunidad Python Panamá con nosotros</h1>
                         <p>
                             Súmate como voluntario para organizar actividades,
@@ -14,9 +14,9 @@ export function VolunteerComponent() {
                         <div className="volunteer-hero-actions">
                             <a
                                 className="btn btn-primary btn-lg volunteer-primary"
-                                href="mailto:pythonpanama4@gmail.com?subject=Quiero%20ser%20voluntario%20en%20Python%20Panam%C3%A1"
+                                href="/formulario-voluntario"
                             >
-                                Escribir para ayudar
+                                Registrarme como voluntario
                             </a>
                             <a
                                 className="btn btn-outline-primary btn-lg"
@@ -96,9 +96,9 @@ export function VolunteerComponent() {
                         </div>
                         <a
                             className="btn btn-primary btn-lg volunteer-primary"
-                            href="mailto:pythonpanama4@gmail.com?subject=Quiero%20ser%20voluntario%20en%20Python%20Panam%C3%A1"
+                            href="/formulario-voluntario"
                         >
-                            Contactar al equipo
+                            Completar formulario
                         </a>
                     </div>
                 </div>

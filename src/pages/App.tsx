@@ -7,6 +7,7 @@ import { CodigoConductaComponent } from "../components/about-us/CodigoConductaCo
 import { ContactPageBodyComponent } from "../components/about-us/ContactPageBodyComponent";
 import { SponsorsComponent } from "../components/about-us/SponsorsComponent";
 import { VolunteerComponent } from "../components/about-us/VolunteerComponent";
+import { VolunteerFormComponent } from "../components/about-us/VolunteerFormComponent";
 import { MerchComponent } from "../components/about-us/MerchComponent";
 import { BlogComponent } from "../components/common/BlogComponent";
 import { PythonHistoryBodyComponent } from "../components/blog/PythonHistoryBodyComponent";
@@ -16,6 +17,7 @@ import { PythonPanama2024_ENG } from "../components/blog/PythonPanama2024_ENG";
 import { PythonRoute } from "../components/events/PythonRoute";
 
 import "../../public/css/HomePage.css";
+import "../../public/css/Contact&Sponsors.css";
 
 export function App() {
     return (
@@ -32,6 +34,7 @@ export function App() {
                     <Route path="/contacto" element={<ContactPageBodyComponent />} />
                     <Route path="/patrocinadores" element={<SponsorsComponent />} />
                     <Route path="/quiero-ayudar" element={<VolunteerComponent />} />
+                    <Route path="/formulario-voluntario" element={<VolunteerFormComponent />} />
                     <Route path="/merch" element={<MerchComponent />} />
                     <Route path="/blog" element={<BlogComponent />} />
                     <Route

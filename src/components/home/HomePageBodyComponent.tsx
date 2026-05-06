@@ -2,13 +2,19 @@ import python_panama_slide_1 from "../../assets/img/carrousel/python_panama_slid
 import python_panama_slide_2 from "../../assets/img/carrousel/python_panama_slide_2.png"
 import python_panama_slide_3 from "../../assets/img/carrousel/python_panama_slide_3.png"
 export function HomePageBodyComponent() {
-    const renderHeroContent = () => (
+    const renderHeroContent = (slideIndex = 0) => {
+        const heroTexts = [
+            { tagline: "¡Que todo Panamá y la LATAM hablen Python!", benefit: "Eventos, talleres, cursos y una comunidad para aprender, compartir y crecer juntos." },
+            { tagline: "Aprende, comparte y crece con nosotros", benefit: "Conecta con otros desarrolladores y expande tu red en la comunidad Python más activa de Panamá." },
+            { tagline: "Educación tecnológica para todos", benefit: "Desde la capital hasta las provincias: recursos, mentorías y oportunidades de crecimiento." }
+        ];
+        const hero = heroTexts[slideIndex % 3];
+        return (
         <div className="hero-content">
             <h1>Python Panamá</h1>
-            <p className="hero-tagline">¡Que todo Panamá y la LATAM hablen Python!</p>
+            <p className="hero-tagline">{hero.tagline}</p>
             <p className="hero-benefit">
-                Eventos, talleres, cursos y una comunidad para aprender,
-                compartir y crecer juntos.
+                {hero.benefit}
             </p>
             <div className="hero-actions" aria-label="Acciones principales">
                 <a
@@ -29,13 +35,10 @@ export function HomePageBodyComponent() {
                     <i className="fas fa-calendar-days me-2" aria-hidden="true"></i>
                     Ver eventos
                 </a>
-                <a className="btn btn-outline-light btn-lg" href="/patrocinadores">
-                    <i className="fas fa-handshake me-2" aria-hidden="true"></i>
-                    Patrocinar
-                </a>
             </div>
         </div>
     );
+    };
 
     return (
         <div role="main" className="main">
@@ -45,22 +48,22 @@ export function HomePageBodyComponent() {
                 {/* Contenedor de imágenes */}
                 <div className="carousel-inner carousel-dark-overlay">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src={python_panama_slide_1} alt="First slide" />
+                        <img className="d-block w-100" src={python_panama_slide_1} alt="Primera slide - Comunidad" />
                         <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            {renderHeroContent()}
+                            {renderHeroContent(0)}
                         </div>
                     </div>
 
                     <div className="carousel-item">
-                        <img className="d-block w-100" src={python_panama_slide_2} alt="Second slide" />
+                        <img className="d-block w-100" src={python_panama_slide_2} alt="Segunda slide - Aprendizaje" />
                         <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            {renderHeroContent()}
+                            {renderHeroContent(1)}
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src={python_panama_slide_3} alt="Third slide" />
+                        <img className="d-block w-100" src={python_panama_slide_3} alt="Tercera slide - Oportunidades" />
                         <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            {renderHeroContent()}
+                            {renderHeroContent(2)}
                         </div>
                     </div>
                 </div>
@@ -74,65 +77,7 @@ export function HomePageBodyComponent() {
                 </button>
             </div>
 
-            <section className="section bg-light section-height-3 border-0 m-0">
-                <div className="container">
-                    <div className="row">
-                        <div className="col text-center">
-                            <h2 className="font-weight-normal text-6 pb-3">
-                                Nuestra <strong className="font-weight-extra-bold">Comunidad</strong>
-                            </h2>
-                        </div>
-                    </div>
 
-                    <div className="row mb-lg-4">
-                        <div className="col-lg-4" data-aos="fade-left" data-aos-delay="300">
-                            <div className="feature-box feature-box-style-2">
-                                <div className="feature-box-icon">
-                                    <i className="fas fa-users text-primary"></i>
-                                </div>
-                                <div className="feature-box-info">
-                                    <h4 className="font-weight-bold mb-2">Meetups</h4>
-                                    <p>
-                                        Únete a nuestro grupo en&nbsp;
-                                        <a className="meetup-link" href="https://www.meetup.com/python-panama/" target="_blank" rel="noopener noreferrer">
-                                            Meetup
-                                        </a> y participa de nuestros eventos. Todos están invitados.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4" data-aos="fade-up">
-                            <div className="feature-box feature-box-style-2">
-                                <div className="feature-box-icon">
-                                    <i className="fas fa-laptop-code text-primary"></i>
-                                </div>
-                                <div className="feature-box-info">
-                                    <h4 className="font-weight-bold mb-2">Talleres</h4>
-                                    <p>Encuentra cursos que te ayudaran a crecer y mejorar en Python.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4" data-aos="fade-right" data-aos-delay="300">
-                            <div className="feature-box feature-box-style-2">
-                                <div className="feature-box-icon">
-                                    <i className="fas fa-comments text-primary"></i>
-                                </div>
-                                <div className="feature-box-info">
-                                    <h4 className="font-weight-bold mb-2">Comunidad</h4>
-                                    <p>
-                                        Forma parte de nuestra&nbsp;
-                                        <a className="community-link" href="https://linktr.ee/pythonpanama" target="_blank" rel="noopener noreferrer">
-                                            Comunidad
-                                        </a> a través de nuestras redes sociales.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <section className="python-route-highlight">
                 <div className="container">
@@ -176,7 +121,7 @@ export function HomePageBodyComponent() {
                             </a>
                             <a
                                 className="btn btn-outline-primary btn-lg"
-                                href="mailto:pythonpanama4@gmail.com?subject=Quiero%20ser%20voluntario%20en%20Python%20Route"
+                                href="/formulario-voluntario"
                             >
                                 Ser voluntario
                             </a>
@@ -221,15 +166,6 @@ export function HomePageBodyComponent() {
 
                     <div className="social-proof-highlights">
                         <article className="social-proof-highlight">
-                            <i className="fas fa-users" aria-hidden="true"></i>
-                            <h3>Meetups y talleres</h3>
-                            <p>
-                                Espacios constantes para aprender, compartir proyectos y
-                                conectar con otros pythonistas.
-                            </p>
-                        </article>
-
-                        <article className="social-proof-highlight">
                             <i className="fas fa-microphone-lines" aria-hidden="true"></i>
                             <h3>PyCon Panamá</h3>
                             <p>
@@ -242,17 +178,17 @@ export function HomePageBodyComponent() {
                             <i className="fas fa-building-columns" aria-hidden="true"></i>
                             <h3>Alianzas educativas</h3>
                             <p>
-                                Colaboraciones con instituciones para acercar formación en
-                                Python a estudiantes y nuevas comunidades.
+                                Colaboraciones con universidades e instituciones para llevar
+                                formación en Python a nuevas comunidades y estudiantes.
                             </p>
                         </article>
 
                         <article className="social-proof-highlight">
                             <i className="fas fa-chart-line" aria-hidden="true"></i>
-                            <h3>PyData y PyCafe</h3>
+                            <h3>PyData Panamá</h3>
                             <p>
-                                Encuentros para conversar sobre datos, proyectos, herramientas
-                                y aplicaciones reales de Python.
+                                Encuentros para explorar ciencia de datos, machine learning
+                                y aplicaciones reales de Python en la industria.
                             </p>
                         </article>
 
@@ -260,17 +196,26 @@ export function HomePageBodyComponent() {
                             <i className="fas fa-route" aria-hidden="true"></i>
                             <h3>Python Route</h3>
                             <p>
-                                Iniciativa para llevar talleres y educación tecnológica a
-                                comunidades fuera de la ciudad capital.
+                                Llevamos educación tecnológica a comunidades fuera de la capital
+                                para crear más oportunidades de acceso y aprendizaje.
                             </p>
                         </article>
 
                         <article className="social-proof-highlight">
-                            <i className="fas fa-handshake-angle" aria-hidden="true"></i>
-                            <h3>Comunidad voluntaria</h3>
+                            <i className="fas fa-hands-holding-circle" aria-hidden="true"></i>
+                            <h3>Impacto voluntario</h3>
                             <p>
-                                Personas que organizan, enseñan, comparten contenido y abren
-                                espacios para nuevos miembros.
+                                Personas comprometidas que organizan, mentorizan, crean
+                                contenido y abren espacios para nuevos miembros.
+                            </p>
+                        </article>
+
+                        <article className="social-proof-highlight">
+                            <i className="fas fa-coffee" aria-hidden="true"></i>
+                            <h3>Comunidad activa</h3>
+                            <p>
+                                Meetups, talleres y espacios informales donde compartimos
+                                conocimiento, experiencias y proyectos en Python.
                             </p>
                         </article>
                     </div>
