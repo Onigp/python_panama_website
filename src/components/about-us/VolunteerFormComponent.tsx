@@ -1,8 +1,19 @@
 import { useState } from "react";
 import { supabase } from "../../utils/supabase";
 
+type VolunteerFormData = {
+    name: string;
+    email: string;
+    phone: string;
+    city: string;
+    experience: string;
+    interests: string[];
+    availability: string;
+    message: string;
+};
+
 export function VolunteerFormComponent() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<VolunteerFormData>({
         name: "",
         email: "",
         phone: "",
@@ -26,8 +37,9 @@ export function VolunteerFormComponent() {
     ];
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        const name = e.target.name as keyof VolunteerFormData;
+        const { value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
         setError(""); // Limpiar error al cambiar campos
     };
 
