@@ -1,8 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Configuración directa para diagnóstico
-const supabaseUrl = 'https://wfiyucykjoohdiazlqbz.supabase.co';
-const supabaseKey = 'sb_publishable_wlIN6gMmG_pVr-h-MAaLOw_jUyW4pmB';
+const supabaseUrl = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+
+if (!supabaseUrl || !supabaseKey) {
+    throw new Error('Define SUPABASE_URL y SUPABASE_ANON_KEY en las variables de entorno antes de ejecutar este script.');
+}
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
