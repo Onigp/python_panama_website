@@ -1,6 +1,6 @@
 import python_panama_slide_1 from "../../assets/img/carrousel/python_panama_slide_1.png"
-import python_panama_slide_2 from "../../assets/img/carrousel/python_panama_slide_2.png"
-import python_panama_slide_3 from "../../assets/img/carrousel/python_panama_slide_3.png"
+import python_panama_slide_2 from "../../assets/img/carrousel/python_panama_slide_4.jpg"
+import python_panama_slide_3 from "../../assets/img/carrousel/python_panama_slide_5.jpg"
 export function HomePageBodyComponent() {
     const renderHeroContent = (slideIndex = 0) => {
         const heroTexts = [
@@ -69,12 +69,12 @@ export function HomePageBodyComponent() {
                 </div>
 
                 {/* Controles de navegación */}
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselPython" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselPython" data-bs-slide="prev">
+                    <i className="fas fa-chevron-left" aria-hidden="true"></i>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carouselPython" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
+                    <i className="fas fa-chevron-right" aria-hidden="true"></i>
+                </button> */}
             </div>
 
 

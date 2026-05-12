@@ -6,6 +6,8 @@ export function ContactPageBodyComponent() {
         { name: "LinkedIn", icon: "fa-linkedin", url: "https://linkedin.com/company/pythonpanama", className: "linkedin" },
         { name: "WhatsApp", icon: "fa-whatsapp", url: "https://www.whatsapp.com/channel/0029VaRydFnJ3jv8O3Manv2R", className: "whatsapp" },
         { name: "Meetup", icon: "fa-meetup", url: "https://meetup.com/pythonpanama", className: "meetup" },
+        { name: "GitHub", icon: "fa-github", url: "https://github.com/pythonpanama/python_panama_website", className: "github" },
+        { name: "YouTube", icon: "fa-youtube", url: "https://www.youtube.com/@pythonpanama", className: "youtube" },
     ];
 
     return (
