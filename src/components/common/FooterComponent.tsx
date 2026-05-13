@@ -20,6 +20,9 @@ export function FooterComponent() {
                                     <li><a href="https://www.meetup.com/python-panama/">
                                         <i className="fa-brands fa-meetup fa-2xl"></i></a>
                                     </li>
+                                    <li><a href="https://github.com/python-panama">
+                                        <i className="fa-brands fa-github fa-xl"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="footer_copyright">
