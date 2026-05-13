@@ -1,6 +1,6 @@
 import python_panama_slide_1 from "../../assets/img/carrousel/python_panama_slide_1.png"
-import python_panama_slide_2 from "../../assets/img/carrousel/python_panama_slide_4.jpg"
-import python_panama_slide_3 from "../../assets/img/carrousel/python_panama_slide_5.jpg"
+import python_panama_slide_2 from "../../assets/img/carrousel/python_panama_slide_4.png"
+import python_panama_slide_3 from "../../assets/img/carrousel/python_panama_slide_5.png"
 export function HomePageBodyComponent() {
     const renderHeroContent = (slideIndex = 0) => {
         const heroTexts = [
