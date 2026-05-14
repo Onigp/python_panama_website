@@ -79,60 +79,76 @@ export function HomePageBodyComponent() {
 
 
 
-            <section className="python-route-highlight">
+
+
+            <section className="audience-paths-section">
                 <div className="container">
-                    <div className="python-route-layout">
-                        <div className="python-route-copy">
-                            <span className="python-route-kicker">Programa destacado</span>
-                            <h2>Python Route</h2>
+                    <div className="audience-paths-header">
+                        <span className="audience-paths-kicker">Elige tu ruta</span>
+                        <h2>¿Cómo quieres participar?</h2>
+                        <p>
+                            Encuentra el camino que mejor se ajusta a tu momento:
+                            aprender, asistir, apoyar o construir comunidad.
+                        </p>
+                    </div>
+
+                    <div className="audience-paths-grid">
+                        <article className="audience-path-card">
+                            <i className="fas fa-seedling" aria-hidden="true"></i>
+                            <h3>Quiero aprender Python</h3>
                             <p>
-                                Llevamos talleres prácticos de Python fuera de la capital
-                                para abrir más oportunidades de educación tecnológica en
-                                comunidades de todo Panamá.
+                                Empieza con recursos, cursos y contenidos pensados para dar
+                                tus primeros pasos con acompañamiento de la comunidad.
                             </p>
-                        </div>
+                            <a className="audience-path-link" href="/blog">
+                                Ver recursos
+                            </a>
+                        </article>
 
-                        <div className="python-route-impact" aria-label="Impacto de Python Route">
-                            <div className="python-route-impact-item">
-                                <i className="fas fa-route" aria-hidden="true"></i>
-                                <h3>Talleres fuera de la capital</h3>
-                                <p>Actividades presenciales en comunidades que quieren acercarse a la programación.</p>
-                            </div>
-                            <div className="python-route-impact-item">
-                                <i className="fas fa-universal-access" aria-hidden="true"></i>
-                                <h3>Acceso inclusivo</h3>
-                                <p>Espacios abiertos para aprender sin importar edad, experiencia o contexto.</p>
-                            </div>
-                            <div className="python-route-impact-item">
-                                <i className="fas fa-graduation-cap" aria-hidden="true"></i>
-                                <h3>Educación tecnológica</h3>
-                                <p>Materiales y talleres para continuar aprendiendo Python con acompañamiento.</p>
-                            </div>
-                        </div>
-
-                        <div className="python-route-actions" aria-label="Acciones de Python Route">
+                        <article className="audience-path-card">
+                            <i className="fas fa-calendar-check" aria-hidden="true"></i>
+                            <h3>Quiero asistir a eventos</h3>
+                            <p>
+                                Conecta con otros pythonistas en meetups, talleres,
+                                charlas y actividades presenciales o virtuales.
+                            </p>
                             <a
-                                className="btn btn-primary btn-lg python-route-primary"
-                                href="https://forms.gle/WH1euWJCtT5qoRVT8"
+                                className="audience-path-link"
+                                href="https://www.meetup.com/es-ES/Python-Panama/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Participar
+                                Ver eventos
                             </a>
-                            <a
-                                className="btn btn-outline-primary btn-lg"
-                                href="/formulario-voluntario"
-                            >
-                                Ser voluntario
+                        </article>
+
+                        <article className="audience-path-card">
+                            <i className="fas fa-handshake-angle" aria-hidden="true"></i>
+                            <h3>Quiero patrocinar</h3>
+                            <p>
+                                Apoya educación tecnológica, visibilidad de marca y
+                                oportunidades para talento local en Panamá.
+                            </p>
+                            <a className="audience-path-link" href="/patrocinadores">
+                                Conocer patrocinios
                             </a>
-                            <a className="btn btn-outline-primary btn-lg" href="/patrocinadores">
-                                Patrocinar
+                        </article>
+
+                        <article className="audience-path-card">
+                            <i className="fas fa-people-carry-box" aria-hidden="true"></i>
+                            <h3>Quiero ayudar</h3>
+                            <p>
+                                Súmate como voluntario para organizar actividades,
+                                mentorizar, crear contenido o apoyar iniciativas.
+                            </p>
+                            <a className="audience-path-link" href="/quiero-ayudar">
+                                Ver formas de ayudar
                             </a>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </section>
-
+            
             <section className="social-proof-section">
                 <div className="container">
                     <div className="social-proof-header">
@@ -228,74 +244,6 @@ export function HomePageBodyComponent() {
                             <strong>PyLadies Panamá</strong>
                             <strong>PyData</strong>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="audience-paths-section">
-                <div className="container">
-                    <div className="audience-paths-header">
-                        <span className="audience-paths-kicker">Elige tu ruta</span>
-                        <h2>¿Cómo quieres participar?</h2>
-                        <p>
-                            Encuentra el camino que mejor se ajusta a tu momento:
-                            aprender, asistir, apoyar o construir comunidad.
-                        </p>
-                    </div>
-
-                    <div className="audience-paths-grid">
-                        <article className="audience-path-card">
-                            <i className="fas fa-seedling" aria-hidden="true"></i>
-                            <h3>Quiero aprender Python</h3>
-                            <p>
-                                Empieza con recursos, cursos y contenidos pensados para dar
-                                tus primeros pasos con acompañamiento de la comunidad.
-                            </p>
-                            <a className="audience-path-link" href="/blog">
-                                Ver recursos
-                            </a>
-                        </article>
-
-                        <article className="audience-path-card">
-                            <i className="fas fa-calendar-check" aria-hidden="true"></i>
-                            <h3>Quiero asistir a eventos</h3>
-                            <p>
-                                Conecta con otros pythonistas en meetups, talleres,
-                                charlas y actividades presenciales o virtuales.
-                            </p>
-                            <a
-                                className="audience-path-link"
-                                href="https://www.meetup.com/es-ES/Python-Panama/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Ver eventos
-                            </a>
-                        </article>
-
-                        <article className="audience-path-card">
-                            <i className="fas fa-handshake-angle" aria-hidden="true"></i>
-                            <h3>Quiero patrocinar</h3>
-                            <p>
-                                Apoya educación tecnológica, visibilidad de marca y
-                                oportunidades para talento local en Panamá.
-                            </p>
-                            <a className="audience-path-link" href="/patrocinadores">
-                                Conocer patrocinios
-                            </a>
-                        </article>
-
-                        <article className="audience-path-card">
-                            <i className="fas fa-people-carry-box" aria-hidden="true"></i>
-                            <h3>Quiero ayudar</h3>
-                            <p>
-                                Súmate como voluntario para organizar actividades,
-                                mentorizar, crear contenido o apoyar iniciativas.
-                            </p>
-                            <a className="audience-path-link" href="/quiero-ayudar">
-                                Ver formas de ayudar
-                            </a>
-                        </article>
                     </div>
                 </div>
             </section>
